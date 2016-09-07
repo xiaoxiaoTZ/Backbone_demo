@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script src="../js/jquery.min.js"></script>
+<script src="../node_modules/underscore/underscore-min.js"></script>
+<script src="../node_modules/backbone/backbone-min.js"></script>
+<script>
+    $(function(){
+        var Man=Backbone.Model.extend({
+            initialize:function(){
+                console.log('is init!!!');
+            },
+            defaults:{
+                name:'111',
+                age:'12'
+            }
+        });
+        var man=new Man();
+        man.set({name:'123'});
+    });
+</script>
+</body>
+</html>
